@@ -14,7 +14,7 @@ const ItemDetail = ({ el }) => {
 
         <div className={styles.bottom}>
           <i className={styles.cate}>{el.category}</i>
-          <h5 className={styles.price}>{el.price} $</h5>
+          <h5 className={styles.price}>{el.price}$</h5>
         </div>
 
       </div>
