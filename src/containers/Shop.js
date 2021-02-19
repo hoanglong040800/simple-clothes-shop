@@ -16,13 +16,13 @@ const Shop = () => {
   }, [])
 
   return (
-    <>
+    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
       {
         itemList
           ? itemList.map(el => <ItemDetail el={el} key={el.id} />)
           : <p>Sorry, no item available</p>
       }
-    </>
+    </div>
   )
 }
 

@@ -16,14 +16,14 @@ const Home = () => {
   }, [])
 
   return (
-    <>
-      {
-        itemList
-          ? itemList.map(el => <ItemDetail el={el} key={el.id} />)
-          : <p>Sorry, no item available</p>
-      }
-    </>
-  )
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        {
+          itemList
+            ? itemList.map(el => <ItemDetail el={el} key={el.id} />)
+            : <p>Sorry, no item available</p>
+        }
+      </div>
+    )
 }
 
 export default Home

@@ -3,20 +3,28 @@
     flex-direction: column;
     width: 200px;
     height: 250px;
-    margin: 10px;
-    border: 1px solid #6e6e6e;
+    margin: 15px 10px;
+    border: 1px solid #dcdcdc;
     border-radius: 10px;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, .1);
+    transition: 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.05, 1.05);
+    cursor: pointer;
 }
 
 .imgContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 150px;
 }
 
-.imgContainer >img{
-    max-height: 150px;
-    max-width: 180px;
+.imgContainer>img {
+    max-height: 120px;
+    max-width: 170px;
     object-fit: contain;
 }
 
@@ -42,6 +50,6 @@
     font-size: 0.9em;
 }
 
-.price{
+.price {
     font-size: 1em;
 }
