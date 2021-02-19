@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 250px;
+    margin: 10px;
+    border: 1px solid #6e6e6e;
+    border-radius: 10px;
+}
+
+.imgContainer {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+}
+
+.content {
+    flex: 1;
+    padding: 15px 8px;
+}
+
+.title {
+    height: 43px;
+    margin: 0 0 0 0;
+    overflow: clip;
+}
+
+.bottom {
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cate {
+    font-size: 0.9em;
+}
+
+.price{
+    font-size: 1em;
+}

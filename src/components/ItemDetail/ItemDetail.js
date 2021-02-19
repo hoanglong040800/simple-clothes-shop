@@ -1,14 +1,26 @@
-
+import styles from './ItemDetail.module.css'
 
 const ItemDetail = ({ el }) => {
   return (
-    <div>
-      <h4>{el.title}</h4>
-      <p>{el.price}</p>
-      <p>{el.description}</p>
-      <p>{el.category}</p>
-      <img src={el.image} alt={el.title} style={{ width: '50px' }} />
+
+    <div className={styles.container}>
+
+      <div className={styles.imgContainer}>
+        <img src={el.image} alt={el.title} />
+      </div>
+
+      <div className={styles.content}>
+        <p className={styles.title}>{el.title}</p>
+
+        <div className={styles.bottom}>
+          <i className={styles.cate}>{el.category}</i>
+          <h5 className={styles.price}>{el.price} $</h5>
+        </div>
+
+      </div>
+
     </div>
+
   )
 }
 
