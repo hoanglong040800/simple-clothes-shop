@@ -10,11 +10,15 @@ const ItemDetail = ({ el }) => {
         </div>
 
         <div className={styles.content}>
-          <h1>{el.title}</h1>
+          <h2>{el.title}</h2>
           <p className={styles.description}>{el.description}</p>
-          <h1 className={styles.price}>{el.price}$</h1>
+          {
+            el.price
+              ? <h1 className={styles.price}>{el.price}$</h1>
+              : null
+          }
         </div>
-        
+
       </div>
     </div>
   )

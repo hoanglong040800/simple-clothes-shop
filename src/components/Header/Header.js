@@ -5,7 +5,7 @@ import './Header.css'
 function Header() {
   return (
     <header>
-      <h3 className='logo'>Clothes Shop</h3>
+      <h1 className='logo'>Clothes Shop</h1>
 
       <nav>
         <Link to='/' className='link'>Home</Link>
