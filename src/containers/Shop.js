@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
-import ItemDetail from '../components/ItemDetail/ItemDetail'
+import ItemDetail from '../components/ItemCard/ItemCard'
+
 
 const Shop = () => {
   const [itemList, setItemList] = useState([])

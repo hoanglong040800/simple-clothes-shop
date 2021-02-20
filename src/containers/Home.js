@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
-import ItemDetail from '../components/ItemDetail/ItemDetail'
+import ItemDetail from '../components/ItemCard/ItemCard'
 
 const Home = () => {
   const [itemList, setItemList] = useState([])
@@ -16,14 +17,14 @@ const Home = () => {
   }, [])
 
   return (
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-        {
-          itemList
-            ? itemList.map(el => <ItemDetail el={el} key={el.id} />)
-            : <p>Sorry, no item available</p>
-        }
-      </div>
-    )
+    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      {
+        itemList
+          ? itemList.map(el => <ItemDetail el={el} key={el.id} />)
+          : <p>Sorry, no item available</p>
+      }
+    </div>
+  )
 }
 
 export default Home
