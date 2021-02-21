@@ -13,18 +13,44 @@ const Shop = () => {
     setItemList(data)
   }
 
+  const fetchCate = async (cate) => {
+    const res = await fetch(`https://fakestoreapi.com/products/category/${cate}`)
+    const data = await res.json()
+    setItemList(data)
+  }
+
   useEffect(() => {
     fetchItemList()
   }, [])
 
+  const handleSelect = (e) => {
+    const value = e.target.value
+    value == 'all'
+      ? fetchItemList()
+      : fetchCate(value)
+  }
+
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-      {
-        itemList
-          ? itemList.map(el => <ItemDetail el={el} key={el.id} />)
-          : <p>Sorry, no item available</p>
-      }
-    </div>
+    <>
+      <div style={{ paddingLeft: 20 }}>
+        <label htmlFor="category">Filter: </label>
+        <select name="category" onChange={(e) => handleSelect(e)}>
+          <option value="all">All</option>
+          <option value="men clothing">Men Clothing</option>
+          <option value="jewelery">Jewelery</option>
+          <option value="electronics">Electronics</option>
+          <option value="women clothing">Women Clothing</option>
+        </select>
+      </div>
+
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        {
+          itemList
+            ? itemList.map(el => <ItemDetail el={el} key={el.id} />)
+            : <p>Sorry, no item available</p>
+        }
+      </div>
+    </>
   )
 }
 
